@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - TruthSphere</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <h1>TruthSphere</h1>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <span id="welcomeUser"></span>
+    <a href="#" onclick="logout()">Logout</a>
+  </div>
+</nav>
+
+<section class="dashboard">
+  <h2 id="dashTitle">Welcome!</h2>
+
+  <div class="dashboard-cards">
+    <div class="dash-card">
+      <h3>Submitted Articles</h3>
+      <p>12</p>
+    </div>
+    <div class="dash-card">
+      <h3>Votes Cast</h3>
+      <p>58</p>
+    </div>
+    <div class="dash-card">
+      <h3>Reputation</h3>
+      <p>95</p>
+    </div>
+  </div>
+
+  <div class="recent-section">
+    <h3>Recent Activity</h3>
+    <p class="muted">Your submitted articles and votes will appear here.</p>
+  </div>
+</section>
+
+<script>
+  // Auth guard — redirect to login if no token
+  const token = localStorage.getItem("token");
+  if (!token) {
+    window.location.href = "login.html";
+  }
+
+  const userName = localStorage.getItem("userName") || "User";
+  document.getElementById("welcomeUser").textContent = "Hello, " + userName;
+  document.getElementById("dashTitle").textContent = "Welcome, " + userName + "!";
+
+  function logout() {
+    localStorage.removeItem("token");
+    localStorage.removeItem("userName");
+    window.location.href = "index.html";
+  }
+</script>
+</body>
+</html>

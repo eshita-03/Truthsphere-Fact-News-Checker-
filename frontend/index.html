@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TruthSphere - Fight Fake News</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <h1>TruthSphere</h1>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="login.html">Login</a>
+    <a href="signup.html">Signup</a>
+    <a href="dashboard.html">Dashboard</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <h2>Fight Fake News Together</h2>
+  <p>Community Driven Fact Checking Platform</p>
+  <div class="search-box">
+    <input id="searchInput" type="text" placeholder="Search news headlines...">
+    <button id="searchBtn">Search</button>
+  </div>
+</section>
+
+<section class="categories">
+  <button data-category="general" class="active">All</button>
+  <button data-category="politics">Politics</button>
+  <button data-category="technology">Technology</button>
+  <button data-category="health">Health</button>
+  <button data-category="sports">Sports</button>
+  <button data-category="science">Science</button>
+</section>
+
+<section class="news-container" id="newsContainer">
+  <div class="loading">Loading news...</div>
+</section>
+
+<script src="js/config.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
