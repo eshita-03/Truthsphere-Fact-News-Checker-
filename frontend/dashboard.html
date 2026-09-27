@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - TruthSphere</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <h1>TruthSphere</h1>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <span id="welcomeUser"></span>
+    <a href="#" onclick="logout()">Logout</a>
+  </div>
+</nav>
+
+<section class="dashboard">
+  <h2 id="dashTitle">Welcome!</h2>
+
+  <div class="dashboard-cards">
+    <div class="dash-card">
+      <h3>Claims Verified</h3>
+      <p id="statVerified">–</p>
+    </div>
+    <div class="dash-card">
+      <h3>Votes Cast</h3>
+      <p id="statVotes">–</p>
+    </div>
+    <div class="dash-card">
+      <h3>Reputation</h3>
+      <p id="statReputation">–</p>
+    </div>
+  </div>
+
+  <div class="recent-section">
+    <h3>Recent Activity</h3>
+    <div id="recentActivity"><p class="muted">Loading...</p></div>
+  </div>
+</section>
+
+<script src="js/config.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>
